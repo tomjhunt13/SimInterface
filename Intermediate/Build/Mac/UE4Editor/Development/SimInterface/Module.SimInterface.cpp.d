@@ -2460,8 +2460,8 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Development/SimInterface/Module.SimInterface.cpp \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Development/SimInterface/Definitions.SimInterface.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Private/NewActorComponent2.cpp \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/NewActorComponent2.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Private/DemoComponent.cpp \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/DemoComponent.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
@@ -2721,12 +2721,6 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/optional \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/Framework/include/SimFramework/Components.h \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/Framework/include/SimFramework/Interpolation.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/NewActorComponent2.generated.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Private/SimInput.cpp \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/SimInput.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/SimInterface.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/SimInput.generated.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Private/SimInputTest.cpp \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/SimInputTest.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/SimInputTest.generated.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Private/SimInterface.cpp
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/DemoComponent.generated.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Private/SimInterface.cpp \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/SimInterface.h
