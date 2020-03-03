@@ -1,0 +1,3 @@
+[submodule "ThirdParty/SimFramework"]
+	path = ThirdParty/SimFramework
+	url = https://github.com/tomjhunt13/SimFramework.git
