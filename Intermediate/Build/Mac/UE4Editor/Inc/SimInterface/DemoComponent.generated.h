@@ -16,11 +16,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define EcoAcademy_Plugins_SimInterface_Source_SimInterface_Public_DemoComponent_h_46_SPARSE_DATA
 #define EcoAcademy_Plugins_SimInterface_Source_SimInterface_Public_DemoComponent_h_46_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execBlah) \
+	DECLARE_FUNCTION(execBlah2) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->Blah(); \
+		P_THIS->Blah2(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -53,11 +53,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define EcoAcademy_Plugins_SimInterface_Source_SimInterface_Public_DemoComponent_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execBlah) \
+	DECLARE_FUNCTION(execBlah2) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->Blah(); \
+		P_THIS->Blah2(); \
 		P_NATIVE_END; \
 	} \
  \

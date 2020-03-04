@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeDemoComponent() {}
 	SIMINTERFACE_API UClass* Z_Construct_UClass_UDemoComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_SimInterface();
-	SIMINTERFACE_API UFunction* Z_Construct_UFunction_UDemoComponent_Blah();
+	SIMINTERFACE_API UFunction* Z_Construct_UFunction_UDemoComponent_Blah2();
 	SIMINTERFACE_API UFunction* Z_Construct_UFunction_UDemoComponent_ReadOutput();
 	SIMINTERFACE_API UFunction* Z_Construct_UFunction_UDemoComponent_Update();
 	SIMINTERFACE_API UFunction* Z_Construct_UFunction_UDemoComponent_WriteInput();
@@ -26,14 +26,14 @@ void EmptyLinkFunctionForGeneratedCodeDemoComponent() {}
 	{
 		UClass* Class = UDemoComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "Blah", &UDemoComponent::execBlah },
+			{ "Blah2", &UDemoComponent::execBlah2 },
 			{ "ReadOutput", &UDemoComponent::execReadOutput },
 			{ "Update", &UDemoComponent::execUpdate },
 			{ "WriteInput", &UDemoComponent::execWriteInput },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_UDemoComponent_Blah_Statics
+	struct Z_Construct_UFunction_UDemoComponent_Blah2_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -41,18 +41,18 @@ void EmptyLinkFunctionForGeneratedCodeDemoComponent() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UDemoComponent_Blah_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UDemoComponent_Blah2_Statics::Function_MetaDataParams[] = {
 		{ "Category", "SimInterface" },
 		{ "ModuleRelativePath", "Public/DemoComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDemoComponent_Blah_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDemoComponent, nullptr, "Blah", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDemoComponent_Blah_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDemoComponent_Blah_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UDemoComponent_Blah()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDemoComponent_Blah2_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDemoComponent, nullptr, "Blah2", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDemoComponent_Blah2_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDemoComponent_Blah2_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UDemoComponent_Blah2()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDemoComponent_Blah_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDemoComponent_Blah2_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -174,7 +174,7 @@ void EmptyLinkFunctionForGeneratedCodeDemoComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SimInterface,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UDemoComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDemoComponent_Blah, "Blah" }, // 363389587
+		{ &Z_Construct_UFunction_UDemoComponent_Blah2, "Blah2" }, // 1931920439
 		{ &Z_Construct_UFunction_UDemoComponent_ReadOutput, "ReadOutput" }, // 2106838775
 		{ &Z_Construct_UFunction_UDemoComponent_Update, "Update" }, // 1382072103
 		{ &Z_Construct_UFunction_UDemoComponent_WriteInput, "WriteInput" }, // 840190895
@@ -214,7 +214,7 @@ void EmptyLinkFunctionForGeneratedCodeDemoComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UDemoComponent, 1478474037);
+	IMPLEMENT_CLASS(UDemoComponent, 3769319948);
 	template<> SIMINTERFACE_API UClass* StaticClass<UDemoComponent>()
 	{
 		return UDemoComponent::StaticClass();

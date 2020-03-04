@@ -67,7 +67,7 @@ public:
     void Update(float t_np1);
 
     UFUNCTION(BlueprintCallable, Category="SimInterface")
-    void Blah(){};
+    void Blah2(){};
 
 private:
     DemoModel m_Model;

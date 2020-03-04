@@ -18,6 +18,8 @@ DemoModel::DemoModel()
             {},
             {&(this->m_SumForces)},
             {&(this->m_OutputBlock)});
+
+    this->Initialise(0.f);
 }
 
 
