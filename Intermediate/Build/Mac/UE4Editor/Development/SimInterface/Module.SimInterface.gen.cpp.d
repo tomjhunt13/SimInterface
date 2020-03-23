@@ -2460,31 +2460,11 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Development/SimInterface/Module.SimInterface.gen.cpp \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Development/SimInterface/Definitions.SimInterface.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/DemoComponent.gen.cpp \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/MassSpringDamperSim.gen.cpp \
   /Users/Shared/Epic\ Games/UE_4.24/Engine/Source/Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
   /Users/Shared/Epic\ Games/UE_4.24/Engine/Source/Runtime/CoreUObject/Public/UObject/MetaData.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/DemoComponent.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bit \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstring \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__debug \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/tuple \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdexcept \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cassert \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/atomic \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/MassSpringDamperSim.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/SimModels/include/SimModels/MassSpringDamper1D.h \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/ThirdParty/eigen/Eigen/Dense \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/ThirdParty/eigen/Eigen/Core \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/ThirdParty/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -2496,6 +2476,8 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include/smmintrin.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include/popcntintrin.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/complex \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdexcept \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/sstream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios \
@@ -2503,6 +2485,21 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string_view \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__string \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstring \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__debug \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/tuple \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cassert \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/atomic \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bit \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdio \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cwchar \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cwctype \
@@ -2512,6 +2509,7 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ratio \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/system_error \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__errc \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cerrno \
@@ -2532,6 +2530,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/istream \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/ThirdParty/eigen/Eigen/src/Core/util/MKL_support.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/array \
@@ -2717,11 +2716,25 @@
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/ThirdParty/eigen/Eigen/src/Eigenvalues/./RealQZ.h \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/ThirdParty/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/Framework/include/SimFramework/Framework.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__node_handle \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/optional \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stack \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/deque \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/Framework/include/SimFramework/Components.h \
   /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/Framework/include/SimFramework/Interpolation.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/DemoComponent.generated.h \
-  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/SimInterface.init.gen.cpp
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/MassSpringDamperSim.generated.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/SimInterface.init.gen.cpp \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/StandaloneEngine.gen.cpp \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/StandaloneEngine.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/SimModels/include/SimModels/EngineStandalone.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/Framework/include/SimFramework/Utilities.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/SimModels/include/SimModels/VehicleComponents.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/StandaloneEngine.generated.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/Vehicle.gen.cpp \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Source/SimInterface/Public/Vehicle.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/ThirdParty/SimFramework/SimModels/include/SimModels/Vehicle.h \
+  /Users/tom/Documents/University/Y4_S2/UE4Projects/EcoAcademy/EcoAcademy/Plugins/SimInterface/Intermediate/Build/Mac/UE4Editor/Inc/SimInterface/Vehicle.generated.h

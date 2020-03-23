@@ -15,13 +15,15 @@ public class SimFramework : ModuleRules
 
 
 		PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "Framework/include"));
-        PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "Vehicle/include"));
+        PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "SimModels/include"));
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "ThirdParty/eigen"));
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "ThirdParty/json"));
 
 		if (Target.Platform == UnrealTargetPlatform.Mac)
 		{
 		    PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Mac/libFramework.a"));
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Mac/libSimModels.a"));
+
         }
 
 	}
