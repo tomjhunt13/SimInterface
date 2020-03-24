@@ -11,9 +11,9 @@ UVehicle::UVehicle()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
-    this->m_IOBlocks = this->m_Vehicle.Blocks();
-    Models::VehicleParameters params;
-    this->m_Vehicle.SetParameters(params);
+//    this->m_IOBlocks = this->m_Vehicle.Blocks();
+//    Models::VehicleParameters params;
+//    this->m_Vehicle.SetParameters(params);
 
 
 }
@@ -25,7 +25,7 @@ void UVehicle::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	this->m_Vehicle.Initialise(0.f);
+//	this->m_Vehicle.Initialise(0.f);
 
 
 }
@@ -39,44 +39,44 @@ void UVehicle::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	// ...
 }
 
-
-void UVehicle::WriteInput(float throttle, float brakePressure)
-{
-    this->m_IOBlocks.InThrottle->WriteValue(throttle);
-    this->m_IOBlocks.InBrakePressure->WriteValue(brakePressure);
-};
-
-void UVehicle::ShiftUp()
-{
-    this->m_Vehicle.ShiftUp();
-};
-
-void UVehicle::ShiftDown()
-{
-    this->m_Vehicle.ShiftDown();
-}
-
-float UVehicle::Position()
-{
-    return this->m_IOBlocks.OutPosition->ReadValue();
-};
-
-float UVehicle::Velocity()
-{
-    return this->m_IOBlocks.OutVelocity->ReadValue();
-};
-
-float UVehicle::EngineSpeed()
-{
-    return this->m_IOBlocks.OutEngineSpeed->ReadValue();
-};
-
-int UVehicle::Gear()
-{
-    return this->m_Vehicle.CurrentGear();
-};
-
-void UVehicle::Update(float t_np1)
-{
-    this->m_Vehicle.Update(t_np1);
-};
+//
+//void UVehicle::WriteInput(float throttle, float brakePressure)
+//{
+//    this->m_IOBlocks.InThrottle->WriteValue(throttle);
+//    this->m_IOBlocks.InBrakePressure->WriteValue(brakePressure);
+//};
+//
+//void UVehicle::ShiftUp()
+//{
+//    this->m_Vehicle.ShiftUp();
+//};
+//
+//void UVehicle::ShiftDown()
+//{
+//    this->m_Vehicle.ShiftDown();
+//}
+//
+//float UVehicle::Position()
+//{
+//    return this->m_IOBlocks.OutPosition->ReadValue();
+//};
+//
+//float UVehicle::Velocity()
+//{
+//    return this->m_IOBlocks.OutVelocity->ReadValue();
+//};
+//
+//float UVehicle::EngineSpeed()
+//{
+//    return this->m_IOBlocks.OutEngineSpeed->ReadValue();
+//};
+//
+//int UVehicle::Gear()
+//{
+//    return this->m_Vehicle.CurrentGear();
+//};
+//
+//void UVehicle::Update(float t_np1)
+//{
+//    this->m_Vehicle.Update(t_np1);
+//};

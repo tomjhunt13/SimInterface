@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 
-#include "SimModels/Vehicle.h"
+//#include "SimModels/Vehicle.h"
 
 #include "Vehicle.generated.h"
 
@@ -31,32 +31,32 @@ public:
 //    UFUNCTION(BlueprintCallable, Category="Vehicle")
 //    void SetParameters(Models::VehicleParameters parameters);
 
-	UFUNCTION(BlueprintCallable, Category="Vehicle")
-    void WriteInput(float throttle, float brakePressure);
+//	UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    void WriteInput(float throttle, float brakePressure);
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    void ShiftUp();
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    void ShiftDown();
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    float Position();
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    float Velocity();
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    float EngineSpeed();
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    int Gear();
+//
+//    UFUNCTION(BlueprintCallable, Category="Vehicle")
+//    void Update(float t_np1);
 
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    void ShiftUp();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    void ShiftDown();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    float Position();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    float Velocity();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    float EngineSpeed();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    int Gear();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    void Update(float t_np1);
-
-private:
-
-	Models::Vehicle m_Vehicle;
-	Models::VehicleBlocks m_IOBlocks;
+//private:
+//
+//	Models::Vehicle m_Vehicle;
+//	Models::VehicleBlocks m_IOBlocks;
 };
