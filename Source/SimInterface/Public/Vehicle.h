@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 
 //#include "SimModels/Vehicle.h"
+//#include "SimModels/VehicleComponents.h"
 
 #include "Vehicle.generated.h"
 
@@ -55,8 +56,8 @@ public:
 //    UFUNCTION(BlueprintCallable, Category="Vehicle")
 //    void Update(float t_np1);
 
-//private:
-//
+private:
+
 //	Models::Vehicle m_Vehicle;
 //	Models::VehicleBlocks m_IOBlocks;
 };
