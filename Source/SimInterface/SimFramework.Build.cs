@@ -19,12 +19,19 @@ public class SimFramework : ModuleRules
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "ThirdParty/eigen"));
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "ThirdParty/json"));
 
+
 		if (Target.Platform == UnrealTargetPlatform.Mac)
 		{
-		    PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Mac/libFramework.a"));
-            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Mac/libSimModels.a"));
-
+		    PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Darwin/libFramework.a"));
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Darwin/libSimModels.a"));
         }
+
+        else if (Target.Platform == UnrealTargetPlatform.Win64)
+        {
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Windows/libFramework.lib"));
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Windows/libSimModels.lib"));
+        }
+
 
 	}
 }
