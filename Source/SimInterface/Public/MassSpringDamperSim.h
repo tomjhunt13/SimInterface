@@ -41,5 +41,6 @@ public:
 private:
 
     Models::MassSpringDamper1D m_MSD;
+    Models::MassSpringDamperBlocks m_Blocks;
 		
 };

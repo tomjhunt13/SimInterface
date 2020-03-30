@@ -15,7 +15,14 @@ UVehicleModel::UVehicleModel()
     Models::VehicleParameters params;
     params.EngineJSON = "/Users/tom/Documents/University/Y4_S2/Data/Engine/2L_Turbo_Gasoline.json";
 
+    params.Mass = 1500.f;
+    params.GearshiftLag = 0.75;
+    params.A = 2.5;
+    params.ClutchStiffness = 100.f;
+    params.EngineViscousConstant = 0.05;
+    params.EngineInertia = 0.2f;
     this->m_Vehicle.SetParameters(params);
+    this->m_Vehicle.SetLogOutputFile("/Users/tom/Documents/University/Y4_S2/Data/UE4Out.csv");
 }
 
 

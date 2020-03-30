@@ -11,6 +11,7 @@ UMassSpringDamperSim::UMassSpringDamperSim() : m_MSD(1, 4, 0.2)
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+	this->m_Blocks = this->m_MSD.Blocks();
 }
 
 
@@ -35,12 +36,12 @@ void UMassSpringDamperSim::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 void UMassSpringDamperSim::WriteInput(float inputValue)
 {
-    this->m_MSD.InputForceBlock()->WriteValue(inputValue);
+    this->m_Blocks.InputForceBlock->WriteValue(inputValue);
 };
 
 float UMassSpringDamperSim::ReadOutput()
 {
-    return this->m_MSD.MassPositionBlock()->ReadValue();
+    return this->m_Blocks.MassPositionBlock->ReadValue();
 };
 
 void UMassSpringDamperSim::Update(float t_np1)
