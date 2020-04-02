@@ -12,6 +12,37 @@
 
 
 USTRUCT(BlueprintType)
+struct FVehicleInput
+{
+    GENERATED_USTRUCT_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Throttle = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Brake = 0.f;
+};
+
+USTRUCT(BlueprintType)
+struct FVehicleOutput
+{
+    GENERATED_USTRUCT_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Position = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Velocity = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float EngineSpeed = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int Gear = 1;
+};
+
+
+USTRUCT(BlueprintType)
 struct FVehicleParameters
 {
     GENERATED_USTRUCT_BODY()
@@ -57,6 +88,9 @@ public:
 
     UFUNCTION(BlueprintCallable, Category="Vehicle")
     void Initialise();
+
+    UFUNCTION(BlueprintCallable, Category="Vehicle")
+    FVehicleOutput NewUpdate(float t_np1, FVehicleInput input);
 
 
 	// Called every frame

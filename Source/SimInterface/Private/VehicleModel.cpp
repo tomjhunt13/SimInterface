@@ -58,6 +58,23 @@ void UVehicleModel::Initialise()
 };
 
 
+FVehicleOutput UVehicleModel::NewUpdate(float t_np1, FVehicleInput input)
+{
+    // Write input
+    this->m_IOBlocks.InThrottle->WriteValue(input.Throttle);
+    this->m_IOBlocks.InBrakePressure->WriteValue(input.Brake);
+
+    // Update
+    this->m_Vehicle.Update(t_np1);
+
+    // Return output
+    return {this->m_IOBlocks.OutPosition->ReadValue(),
+            this->m_IOBlocks.OutVelocity->ReadValue(),
+            this->m_IOBlocks.OutEngineSpeed->ReadValue(),
+            this->m_Vehicle.CurrentGear()};
+};
+
+
 
 void UVehicleModel::WriteInput(float throttle, float brakePressure)
 {
