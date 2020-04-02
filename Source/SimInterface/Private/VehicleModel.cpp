@@ -54,13 +54,32 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
 
 void UVehicleModel::Initialise()
 {
+    this->GearState = EVehicleGearState::Engaged;
     this->m_Vehicle.Initialise(0.f);
     this->t_n = 0.f;
+
 };
 
 
 FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
 {
+    // Shift Gear
+    switch (this->GearState)
+    {
+        case EVehicleGearState::Engaged:
+            break;
+
+        case EVehicleGearState::ShiftUp:
+            this->m_Vehicle.ShiftUp();
+            this->GearState = EVehicleGearState::Engaged;
+            break;
+
+        case EVehicleGearState::ShiftDown:
+            this->m_Vehicle.ShiftDown();
+            this->GearState = EVehicleGearState::Engaged;
+            break;
+    }
+
     // Update time
     this->t_n += dt;
 
@@ -83,10 +102,12 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
 
 void UVehicleModel::ShiftUp()
 {
-    this->m_Vehicle.ShiftUp();
+    this->GearState = EVehicleGearState::ShiftUp;
 };
 
 void UVehicleModel::ShiftDown()
 {
+    this->GearState = EVehicleGearState::ShiftDown;
+
     this->m_Vehicle.ShiftDown();
 }

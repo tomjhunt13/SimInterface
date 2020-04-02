@@ -10,6 +10,13 @@
 
 #include "VehicleModel.generated.h"
 
+enum class EVehicleGearState
+{
+    Engaged,
+    ShiftUp,
+    ShiftDown
+};
+
 
 USTRUCT(BlueprintType)
 struct FVehicleInput
@@ -58,9 +65,6 @@ struct FVehicleParameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
     float GearshiftLag = 0.75;
 
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float TestFloat;
 };
 
 
@@ -79,10 +83,6 @@ protected:
 
 public:
 
-    // Property
-    UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(ExposeOnSpawn="true"))
-    FVehicleParameters TempVehicleParameters;
-
     UFUNCTION(BlueprintCallable, Category="Vehicle")
     void ConstructVehicle(FVehicleParameters vehicleParameters);
 
@@ -92,11 +92,6 @@ public:
     UFUNCTION(BlueprintCallable, Category="Vehicle")
     FVehicleOutput Update(float dt, FVehicleInput input);
 
-
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-
     UFUNCTION(BlueprintCallable, Category="Vehicle")
     void ShiftUp();
 
@@ -104,8 +99,14 @@ public:
     void ShiftDown();
 
 
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+
+
 private:
 
+    EVehicleGearState GearState;
     float t_n;
 
 	Models::Vehicle m_Vehicle;
