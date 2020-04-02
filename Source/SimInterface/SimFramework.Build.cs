@@ -20,8 +20,8 @@ public class SimFramework : ModuleRules
 
 		if (Target.Platform == UnrealTargetPlatform.Mac)
 		{
-		    PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Darwin/libFramework.a"));
-            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Darwin/libSimModels.a"));
+		    PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Darwin/x86_64/libFramework.a"));
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Darwin/x86_64/libSimModels.a"));
         }
 
         else if (Target.Platform == UnrealTargetPlatform.Win64)

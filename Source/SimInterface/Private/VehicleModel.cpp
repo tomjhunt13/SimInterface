@@ -22,8 +22,11 @@ UVehicleModel::UVehicleModel()
     params.ClutchStiffness = 100.f;
     params.EngineViscousConstant = 0.05;
     params.EngineInertia = 0.2f;
+
+    params.LogOutputFile = "/Users/tom/Documents/University/Y4_S2/Data/UE4Out.csv";
+    params.LogFrequency = 25;
+
     this->m_Vehicle.SetParameters(params);
-    this->m_Vehicle.SetLogOutputFile("/Users/tom/Documents/University/Y4_S2/Data/UE4Out.csv", 10);
 }
 
 
