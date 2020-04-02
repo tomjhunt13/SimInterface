@@ -13,7 +13,8 @@ UVehicleModel::UVehicleModel()
 	// ...
     this->m_IOBlocks = this->m_Vehicle.Blocks();
     Models::VehicleParameters params;
-    params.EngineJSON = "/Users/tom/Documents/University/Y4_S2/Data/Engine/2L_Turbo_Gasoline.json";
+    params.EngineJSON = "/Users/tom/Documents/University/Y4_S2/SimFramework/Sandbox/Data/2L_Turbo_Gasoline.json";
+    params.RoadJSON = "/Users/tom/Documents/University/Y4_S2/SimFramework/Sandbox/Data/road1.json";
 
     params.Mass = 1500.f;
     params.GearshiftLag = 0.75;
@@ -22,7 +23,7 @@ UVehicleModel::UVehicleModel()
     params.EngineViscousConstant = 0.05;
     params.EngineInertia = 0.2f;
     this->m_Vehicle.SetParameters(params);
-    this->m_Vehicle.SetLogOutputFile("/Users/tom/Documents/University/Y4_S2/Data/UE4Out.csv");
+    this->m_Vehicle.SetLogOutputFile("/Users/tom/Documents/University/Y4_S2/Data/UE4Out.csv", 10);
 }
 
 

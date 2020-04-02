@@ -11,8 +11,6 @@ public class SimFramework : ModuleRules
 
         string pathToLib = "../../ThirdParty/SimFramework/";
 
-// 		PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib));
-
 
 		PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "Framework/include"));
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, pathToLib, "SimModels/include"));
@@ -28,10 +26,8 @@ public class SimFramework : ModuleRules
 
         else if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Windows/libFramework.lib"));
-            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Windows/libSimModels.lib"));
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Windows/AMD64/Framework.lib"));
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, pathToLib, "Binaries/Windows/AMD64/SimModels.lib"));
         }
-
-
 	}
 }
