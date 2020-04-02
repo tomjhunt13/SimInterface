@@ -5,8 +5,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 
-#include "SimModels/Vehicle.h"
-#include "SimModels/VehicleComponents.h"
+//#include "SimModels/Vehicle.h"
+//#include "SimModels/VehicleComponents.h"
 
 #include "VehicleModel.generated.h"
 
@@ -54,7 +54,7 @@ public:
 
 private:
 
-	Models::Vehicle m_Vehicle;
-	Models::VehicleBlocks m_IOBlocks;
+//	Models::Vehicle m_Vehicle;
+//	Models::VehicleBlocks m_IOBlocks;
 		
 };

@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 
 //#include "SimFramework/Components.h"
-#include "SimModels/EngineStandalone.h"
+//#include "SimModels/EngineStandalone.h"
 
 #include "StandaloneEngine.generated.h"
 
@@ -37,8 +37,8 @@ public:
     UFUNCTION(BlueprintCallable, Category="SimInterface")
     void Update(float t_np1);
 
-private:
-    Models::EngineStandalone m_Engine;
-    Models::EngineBlocks m_Blocks;
+//private:
+//    Models::EngineStandalone m_Engine;
+//    Models::EngineBlocks m_Blocks;
 		
 };

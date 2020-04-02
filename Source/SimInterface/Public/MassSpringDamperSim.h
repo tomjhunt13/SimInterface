@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 
 #include "SimModels/MassSpringDamper1D.h"
-#include "SimModels/Vehicle.h"
+//#include "SimModels/Vehicle.h"
 
 #include "MassSpringDamperSim.generated.h"
 
