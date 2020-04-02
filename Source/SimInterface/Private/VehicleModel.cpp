@@ -55,17 +55,21 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
 void UVehicleModel::Initialise()
 {
     this->m_Vehicle.Initialise(0.f);
+    this->t_n = 0.f;
 };
 
 
-FVehicleOutput UVehicleModel::NewUpdate(float t_np1, FVehicleInput input)
+FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
 {
+    // Update time
+    this->t_n += dt;
+
     // Write input
     this->m_IOBlocks.InThrottle->WriteValue(input.Throttle);
     this->m_IOBlocks.InBrakePressure->WriteValue(input.Brake);
 
     // Update
-    this->m_Vehicle.Update(t_np1);
+    this->m_Vehicle.Update(this->t_n);
 
     // Return output
     return {this->m_IOBlocks.OutPosition->ReadValue(),
@@ -76,11 +80,6 @@ FVehicleOutput UVehicleModel::NewUpdate(float t_np1, FVehicleInput input)
 
 
 
-void UVehicleModel::WriteInput(float throttle, float brakePressure)
-{
-    this->m_IOBlocks.InThrottle->WriteValue(throttle);
-    this->m_IOBlocks.InBrakePressure->WriteValue(brakePressure);
-};
 
 void UVehicleModel::ShiftUp()
 {
@@ -91,28 +90,3 @@ void UVehicleModel::ShiftDown()
 {
     this->m_Vehicle.ShiftDown();
 }
-
-float UVehicleModel::Position()
-{
-    return this->m_IOBlocks.OutPosition->ReadValue();
-};
-
-float UVehicleModel::Velocity()
-{
-    return this->m_IOBlocks.OutVelocity->ReadValue();
-};
-
-float UVehicleModel::EngineSpeed()
-{
-    return this->m_IOBlocks.OutEngineSpeed->ReadValue();
-};
-
-int UVehicleModel::Gear()
-{
-    return this->m_Vehicle.CurrentGear();
-};
-
-void UVehicleModel::Update(float t_np1)
-{
-    this->m_Vehicle.Update(t_np1);
-};

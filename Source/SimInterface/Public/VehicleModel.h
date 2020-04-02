@@ -90,14 +90,12 @@ public:
     void Initialise();
 
     UFUNCTION(BlueprintCallable, Category="Vehicle")
-    FVehicleOutput NewUpdate(float t_np1, FVehicleInput input);
+    FVehicleOutput Update(float dt, FVehicleInput input);
 
 
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UFUNCTION(BlueprintCallable, Category="Vehicle")
-    void WriteInput(float throttle, float brakePressure);
 
     UFUNCTION(BlueprintCallable, Category="Vehicle")
     void ShiftUp();
@@ -105,22 +103,10 @@ public:
     UFUNCTION(BlueprintCallable, Category="Vehicle")
     void ShiftDown();
 
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    float Position();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    float Velocity();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    float EngineSpeed();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    int Gear();
-
-    UFUNCTION(BlueprintCallable, Category="Vehicle")
-    void Update(float t_np1);
 
 private:
+
+    float t_n;
 
 	Models::Vehicle m_Vehicle;
 	Models::VehicleBlocks m_IOBlocks;
