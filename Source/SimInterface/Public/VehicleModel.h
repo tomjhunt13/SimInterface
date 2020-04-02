@@ -11,6 +11,28 @@
 #include "VehicleModel.generated.h"
 
 
+USTRUCT(BlueprintType)
+struct FVehicleParameters
+{
+    GENERATED_USTRUCT_BODY()
+
+    // External Data
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString EngineJSON;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString RoadJSON;
+
+    // Transmisison
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
+    float GearshiftLag = 0.75;
+
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float TestFloat;
+};
+
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SIMINTERFACE_API UVehicleModel : public UActorComponent
 {
@@ -24,7 +46,19 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
+
+    // Property
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(ExposeOnSpawn="true"))
+    FVehicleParameters TempVehicleParameters;
+
+    UFUNCTION(BlueprintCallable, Category="Vehicle")
+    void ConstructVehicle(FVehicleParameters vehicleParameters);
+
+    UFUNCTION(BlueprintCallable, Category="Vehicle")
+    void Initialise();
+
+
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 

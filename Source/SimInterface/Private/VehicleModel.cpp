@@ -12,21 +12,6 @@ UVehicleModel::UVehicleModel()
 
 	// ...
     this->m_IOBlocks = this->m_Vehicle.Blocks();
-    Models::VehicleParameters params;
-    params.EngineJSON = "C:/Users/Tom/Desktop/EcoAcademy/SimFramework/Sandbox/Data/2L_Turbo_Gasoline.json";
-    params.RoadJSON = "C:/Users/Tom/Desktop/EcoAcademy/SimFramework/Sandbox/Data/road1.json";
-
-    params.Mass = 1500.f;
-    params.GearshiftLag = 0.75;
-    params.A = 2.5;
-    params.ClutchStiffness = 100.f;
-    params.EngineViscousConstant = 0.05;
-    params.EngineInertia = 0.2f;
-
-    params.LogOutputFile = "C:/Users/Tom/Desktop/EcoAcademy/SimFramework/Sandbox/Data/UE4Out.csv";
-    params.LogFrequency = 25;
-
-    this->m_Vehicle.SetParameters(params);
 }
 
 
@@ -36,7 +21,6 @@ void UVehicleModel::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-    this->m_Vehicle.Initialise(0.f);
 }
 
 
@@ -47,6 +31,31 @@ void UVehicleModel::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 	// ...
 }
+
+
+void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
+{
+    Models::VehicleParameters params;
+    params.EngineJSON =  TCHAR_TO_UTF8(*vehicleParameters.EngineJSON);
+    params.RoadJSON = TCHAR_TO_UTF8(*vehicleParameters.RoadJSON);
+
+    params.Mass = 1500.f;
+    params.GearshiftLag = vehicleParameters.GearshiftLag;
+    params.A = 2.5;
+    params.ClutchStiffness = 100.f;
+    params.EngineViscousConstant = 0.05;
+    params.EngineInertia = 0.2f;
+
+    params.LogOutputFile = "C:/Users/Tom/Desktop/EcoAcademy/SimFramework/Sandbox/Data/UE4Out.csv";
+    params.LogFrequency = 25;
+
+    this->m_Vehicle.SetParameters(params);
+};
+
+void UVehicleModel::Initialise()
+{
+    this->m_Vehicle.Initialise(0.f);
+};
 
 
 
