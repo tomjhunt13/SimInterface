@@ -46,6 +46,9 @@ struct FVehicleOutput
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     int Gear = 1;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FVector2D Coordinates = {0.f, 0.f};
 };
 
 

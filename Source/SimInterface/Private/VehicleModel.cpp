@@ -91,10 +91,12 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
     this->m_Vehicle.Update(this->t_n);
 
     // Return output
+    auto outCoordinates = this->m_IOBlocks.OutCoordinates->ReadValue();
     return {this->m_IOBlocks.OutPosition->ReadValue(),
             this->m_IOBlocks.OutVelocity->ReadValue(),
             this->m_IOBlocks.OutEngineSpeed->ReadValue(),
-            this->m_Vehicle.CurrentGear()};
+            this->m_Vehicle.CurrentGear(),
+            {outCoordinates[0], outCoordinates[1]}};
 };
 
 
@@ -108,6 +110,4 @@ void UVehicleModel::ShiftUp()
 void UVehicleModel::ShiftDown()
 {
     this->GearState = EVehicleGearState::ShiftDown;
-
-    this->m_Vehicle.ShiftDown();
-}
+};
