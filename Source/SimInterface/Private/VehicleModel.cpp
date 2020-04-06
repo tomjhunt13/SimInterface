@@ -39,15 +39,20 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
     params.EngineJSON =  TCHAR_TO_UTF8(*vehicleParameters.EngineJSON);
     params.RoadJSON = TCHAR_TO_UTF8(*vehicleParameters.RoadJSON);
 
-    params.Mass = 1500.f;
-    params.GearshiftLag = vehicleParameters.GearshiftLag;
-    params.A = 2.5;
-    params.ClutchStiffness = 100.f;
-    params.EngineViscousConstant = 0.05;
-    params.EngineInertia = 0.2f;
+    // Gear ratios
+    for (auto ratio : vehicleParameters.GearRatios) {
+        params.GearRatios.push_back(ratio);
+    };
 
-    params.LogOutputFile = "C:/Users/Tom/Desktop/EcoAcademy/SimFramework/Sandbox/Data/UE4Out.csv";
-    params.LogFrequency = 25;
+    params.Mass = vehicleParameters.Mass;
+    params.Cd = vehicleParameters.Cd;
+    params.A = vehicleParameters.FrontalArea;
+
+    params.LogFrequency = vehicleParameters.LogFrequency;
+    params.GearshiftLag = vehicleParameters.GearShiftLag;
+    params.ClutchStiffness = vehicleParameters.ClutchStiffness;
+
+    params.LogOutputFile = "VehicleSimOut.csv";
 
     this->m_Vehicle.SetParameters(params);
 };
@@ -92,7 +97,7 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
 
     // Return output
     auto outCoordinates = this->m_IOBlocks.OutCoordinates->ReadValue();
-    return {this->m_IOBlocks.OutPosition->ReadValue(),
+    return {FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
             this->m_IOBlocks.OutVelocity->ReadValue(),
             this->m_IOBlocks.OutEngineSpeed->ReadValue(),
             this->m_Vehicle.CurrentGear(),

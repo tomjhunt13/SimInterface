@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Math/UnrealMathUtility.h"
 
 #include "SimModels/Vehicle.h"
-//#include "SimModels/VehicleComponents.h"
 
 #include "VehicleModel.generated.h"
 
@@ -36,7 +36,7 @@ struct FVehicleOutput
     GENERATED_USTRUCT_BODY()
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float Position = 0.f;
+    float Gradient = 0.f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float Velocity = 0.f;
@@ -64,10 +64,28 @@ struct FVehicleParameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FString RoadJSON;
 
-    // Transmisison
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
-    float GearshiftLag = 0.75;
+    // Vehicle Parameters
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TArray<float> GearRatios = {0.07, 0.14, 0.23, 0.32, 0.41, 0.5};
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Mass = 1500;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Cd = 0.3;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float FrontalArea = 2.5;
+
+    // Simulation Specific Parameters
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
+    int LogFrequency = 20;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
+    float GearShiftLag = 1.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
+    float ClutchStiffness = 100;
 };
 
 
