@@ -7,6 +7,9 @@
 #include "Math/UnrealMathUtility.h"
 #include "Misc/Paths.h"
 
+#include "Engine/World.h"
+#include "Kismet/KismetSystemLibrary.h"
+
 #include "SimModels/Vehicle.h"
 
 #include "VehicleModel.generated.h"
@@ -46,20 +49,16 @@ struct FVehicleOutput
     float EngineSpeed = 0.f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float FuelFlowRate = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float CumulativeFuelUsage = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     int Gear = 1;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FVector2D Coordinates = {0.f, 0.f};
-};
-
-
-USTRUCT(BlueprintType)
-struct FTestPaths
-{
-    GENERATED_USTRUCT_BODY()
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString EngineJSON = FPaths::ProjectDir();
 };
 
 USTRUCT(BlueprintType)

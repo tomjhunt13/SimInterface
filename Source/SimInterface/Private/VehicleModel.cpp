@@ -1,6 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "VehicleModel.h"
 
 // Sets default values for this component's properties
@@ -39,12 +36,6 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
 
     FString enginePath = FPaths::ProjectDir() + vehicleParameters.EngineJSON;
     FString roadPath = FPaths::ProjectDir() + vehicleParameters.RoadJSON;
-
-    if (!(FPaths::FileExists(enginePath) && FPaths::FileExists(roadPath)))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Component paths not found."));
-        return;
-    }
 
     params.EngineJSON =  TCHAR_TO_UTF8(*enginePath);
     params.RoadJSON = TCHAR_TO_UTF8(*roadPath);
@@ -114,8 +105,10 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
     // Return output
     auto outCoordinates = this->m_IOBlocks.OutCoordinates->ReadValue();
     return {FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
-            this->m_IOBlocks.OutVelocity->ReadValue(),
+            this->m_IOBlocks.OutLinearVelocity->ReadValue(),
             this->m_IOBlocks.OutEngineSpeed->ReadValue(),
+            this->m_IOBlocks.OutFuelFlowRate->ReadValue(),
+            this->m_IOBlocks.OutFuelCumulative->ReadValue(),
             this->m_IOBlocks.OutCurrentGear->ReadValue(),
             {outCoordinates[0], outCoordinates[1]}};
 };
