@@ -36,8 +36,18 @@ void UVehicleModel::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
 {
     Models::VehicleParameters params;
-    params.EngineJSON =  TCHAR_TO_UTF8(*vehicleParameters.EngineJSON);
-    params.RoadJSON = TCHAR_TO_UTF8(*vehicleParameters.RoadJSON);
+
+    FString enginePath = FPaths::ProjectDir() + vehicleParameters.EngineJSON;
+    FString roadPath = FPaths::ProjectDir() + vehicleParameters.RoadJSON;
+
+    if (!(FPaths::FileExists(enginePath) && FPaths::FileExists(roadPath)))
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Component paths not found."));
+        return;
+    }
+
+    params.EngineJSON =  TCHAR_TO_UTF8(*enginePath);
+    params.RoadJSON = TCHAR_TO_UTF8(*roadPath);
 
     // Gear ratios
     std::vector<float> ratios;

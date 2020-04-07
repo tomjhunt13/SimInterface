@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Math/UnrealMathUtility.h"
+#include "Misc/Paths.h"
 
 #include "SimModels/Vehicle.h"
 
@@ -53,16 +54,25 @@ struct FVehicleOutput
 
 
 USTRUCT(BlueprintType)
+struct FTestPaths
+{
+    GENERATED_USTRUCT_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString EngineJSON = FPaths::ProjectDir();
+};
+
+USTRUCT(BlueprintType)
 struct FVehicleParameters
 {
     GENERATED_USTRUCT_BODY()
 
     // External Data
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString EngineJSON;
+    FString EngineJSON = "Plugins/SimInterface/Content/Data/2L_Turbo_Gasoline.json";
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString RoadJSON;
+    FString RoadJSON = "Plugins/SimInterface/Content/Data/road1.json";
 
     // Vehicle Parameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
