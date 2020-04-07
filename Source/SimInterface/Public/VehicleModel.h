@@ -66,7 +66,7 @@ struct FVehicleParameters
 
     // Vehicle Parameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<float> GearRatios = {0.07, 0.14, 0.23, 0.32, 0.41, 0.5};
+    TArray<float> GearRatios = {11.f, 7.3, 5.5, 3.8, 2.5, 2.f};
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float Mass = 1500;
@@ -77,6 +77,15 @@ struct FVehicleParameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float FrontalArea = 2.5;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float EngineViscousFriction = 0.4;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float EngineInertia = 0.1;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float PeakBrakeForce = 400;
+
     // Simulation Specific Parameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
     int LogFrequency = 20;
@@ -86,6 +95,8 @@ struct FVehicleParameters
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
     float ClutchStiffness = 100;
+
+
 };
 
 

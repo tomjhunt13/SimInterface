@@ -40,13 +40,19 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
     params.RoadJSON = TCHAR_TO_UTF8(*vehicleParameters.RoadJSON);
 
     // Gear ratios
+    std::vector<float> ratios;
     for (auto ratio : vehicleParameters.GearRatios) {
-        params.GearRatios.push_back(ratio);
+        ratios.push_back(ratio);
     };
+    params.GearRatios = ratios;
 
     params.Mass = vehicleParameters.Mass;
     params.Cd = vehicleParameters.Cd;
     params.A = vehicleParameters.FrontalArea;
+    params.EngineViscousConstant = vehicleParameters.EngineViscousFriction;
+
+    params.EngineInertia = vehicleParameters.EngineInertia;
+    params.PeakBrakeForce = vehicleParameters.PeakBrakeForce;
 
     params.LogFrequency = vehicleParameters.LogFrequency;
     params.GearshiftLag = vehicleParameters.GearShiftLag;
@@ -100,7 +106,7 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
     return {FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
             this->m_IOBlocks.OutVelocity->ReadValue(),
             this->m_IOBlocks.OutEngineSpeed->ReadValue(),
-            this->m_Vehicle.CurrentGear(),
+            this->m_IOBlocks.OutCurrentGear->ReadValue(),
             {outCoordinates[0], outCoordinates[1]}};
 };
 
