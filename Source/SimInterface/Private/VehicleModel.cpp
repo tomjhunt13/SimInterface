@@ -104,13 +104,25 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
 
     // Return output
     auto outCoordinates = this->m_IOBlocks.OutCoordinates->ReadValue();
-    return {FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
-            this->m_IOBlocks.OutLinearVelocity->ReadValue(),
-            this->m_IOBlocks.OutEngineSpeed->ReadValue(),
+
+
+
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FVector2D Coordinates = {0.f, 0.f};
+
+    // Road
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Gradient = 0.f;
+
+    return {this->m_IOBlocks.OutEngineSpeed->ReadValue(),
             this->m_IOBlocks.OutFuelFlowRate->ReadValue(),
             this->m_IOBlocks.OutFuelCumulative->ReadValue(),
             this->m_IOBlocks.OutCurrentGear->ReadValue(),
-            {outCoordinates[0], outCoordinates[1]}};
+            this->m_IOBlocks.OutDisplacement->ReadValue(),
+            this->m_IOBlocks.OutLinearVelocity->ReadValue(),
+            {outCoordinates[0], outCoordinates[1]},
+            FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue())};
 };
 
 

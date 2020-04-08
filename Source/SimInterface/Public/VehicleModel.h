@@ -39,12 +39,7 @@ struct FVehicleOutput
 {
     GENERATED_USTRUCT_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float Gradient = 0.f;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float Velocity = 0.f;
-
+    // Engine properties
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float EngineSpeed = 0.f;
 
@@ -54,11 +49,23 @@ struct FVehicleOutput
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float CumulativeFuelUsage = 0.f;
 
+    // Transmission
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     int Gear = 1;
 
+    // Vehicle
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Displacement = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Velocity = 0.f;
+
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FVector2D Coordinates = {0.f, 0.f};
+
+    // Road
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Gradient = 0.f;
 };
 
 USTRUCT(BlueprintType)
