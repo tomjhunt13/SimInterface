@@ -66,6 +66,11 @@ struct FVehicleOutput
     // Road
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float Gradient = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int ClutchEngagementState = 0;
+
+
 };
 
 USTRUCT(BlueprintType)
@@ -88,6 +93,9 @@ struct FVehicleParameters
     float Mass = 1500;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float RollingResistance = 0.015;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float Cd = 0.3;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -100,7 +108,26 @@ struct FVehicleParameters
     float EngineInertia = 0.1;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float PeakBrakeForce = 400;
+    float PeakBrakeForce = 400.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float TyreForceScale = 1.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float WheelRadius = 0.2;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float TransmissionInertia = 2.f;
+
+    // Clutch
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float ClutchMaxNormalForce = 500.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float ClutchTorqueCapacity = 1.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float PullawayClutchMinValue = 0.2;
 
     // Simulation Specific Parameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
@@ -108,11 +135,6 @@ struct FVehicleParameters
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
     float GearShiftLag = 1.f;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)
-    float ClutchStiffness = 100;
-
-
 };
 
 

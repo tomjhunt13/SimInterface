@@ -1,7 +1,7 @@
 #include "VehicleModel.h"
 
 // Sets default values for this component's properties
-UVehicleModel::UVehicleModel()
+UVehicleModel::UVehicleModel() : m_Vehicle(1.f)
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -48,16 +48,23 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
     params.GearRatios = ratios;
 
     params.Mass = vehicleParameters.Mass;
+    params.RollingResistance = vehicleParameters.RollingResistance;
     params.Cd = vehicleParameters.Cd;
     params.A = vehicleParameters.FrontalArea;
     params.EngineViscousConstant = vehicleParameters.EngineViscousFriction;
+
+    params.PeakTyreForceScale = vehicleParameters.TyreForceScale;
+    params.TransmissionInertia = vehicleParameters.TransmissionInertia;
+    params.TyreRadius = vehicleParameters.WheelRadius;
 
     params.EngineInertia = vehicleParameters.EngineInertia;
     params.PeakBrakeForce = vehicleParameters.PeakBrakeForce;
 
     params.LogFrequency = vehicleParameters.LogFrequency;
     params.GearshiftLag = vehicleParameters.GearShiftLag;
-    params.ClutchStiffness = vehicleParameters.ClutchStiffness;
+    params.ClutchTorqueCapacity = vehicleParameters.ClutchTorqueCapacity;
+    params.ClutchMaxNormalForce = vehicleParameters.ClutchMaxNormalForce;
+    params.PullawayClutchMinValue = vehicleParameters.PullawayClutchMinValue;
 
     params.LogOutputFile = "VehicleSimOut.csv";
 
@@ -106,15 +113,6 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
     auto outCoordinates = this->m_IOBlocks.OutCoordinates->ReadValue();
 
 
-
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FVector2D Coordinates = {0.f, 0.f};
-
-    // Road
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float Gradient = 0.f;
-
     return {this->m_IOBlocks.OutEngineSpeed->ReadValue(),
             this->m_IOBlocks.OutFuelFlowRate->ReadValue(),
             this->m_IOBlocks.OutFuelCumulative->ReadValue(),
@@ -122,7 +120,9 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
             this->m_IOBlocks.OutDisplacement->ReadValue(),
             this->m_IOBlocks.OutLinearVelocity->ReadValue(),
             {outCoordinates[0], outCoordinates[1]},
-            FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue())};
+            FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
+            this->m_IOBlocks.OutClutchLockState->ReadValue()
+            };
 };
 
 
