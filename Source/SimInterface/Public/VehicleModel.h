@@ -21,6 +21,13 @@ enum class EVehicleGearState
     ShiftDown
 };
 
+UENUM(BlueprintType)
+enum EUnitSystem
+{
+    e_Imperial UMETA(DisplayName = "Imperial"),
+    e_Metric UMETA(DisplayName = "Metric"),
+};
+
 
 USTRUCT(BlueprintType)
 struct FVehicleInput
@@ -70,7 +77,12 @@ struct FVehicleOutput
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     int ClutchEngagementState = 0;
 
+    // Stats
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float InstantaneousFuelEfficiency = 0;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float AverageFuelEfficiency = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -121,13 +133,17 @@ struct FVehicleParameters
 
     // Clutch
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float ClutchMaxNormalForce = 500.f;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float ClutchTorqueCapacity = 1.f;
+    float ClutchTorqueCapacity = 500.f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float PullawayClutchMinValue = 0.2;
+
+    // Stats
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TEnumAsByte<EUnitSystem> UnitSystem = EUnitSystem::e_Imperial;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float FuelDensity =  0.7489;
 
     // Simulation Specific Parameters
     UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay)

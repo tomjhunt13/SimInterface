@@ -63,8 +63,25 @@ void UVehicleModel::ConstructVehicle(FVehicleParameters vehicleParameters)
     params.LogFrequency = vehicleParameters.LogFrequency;
     params.GearshiftLag = vehicleParameters.GearShiftLag;
     params.ClutchTorqueCapacity = vehicleParameters.ClutchTorqueCapacity;
-    params.ClutchMaxNormalForce = vehicleParameters.ClutchMaxNormalForce;
     params.PullawayClutchMinValue = vehicleParameters.PullawayClutchMinValue;
+
+    switch (vehicleParameters.UnitSystem)
+    {
+        case EUnitSystem::e_Imperial:
+        {
+            params.Units = Models::EUnitSystem::e_Imperial;
+            break;
+        }
+
+        case EUnitSystem::e_Metric:
+        {
+            params.Units = Models::EUnitSystem::e_Metric;
+            break;
+        }
+    }
+
+    params.FuelDensity = vehicleParameters.FuelDensity;
+
 
     params.LogOutputFile = "VehicleSimOut.csv";
 
@@ -121,8 +138,9 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
             this->m_IOBlocks.OutLinearVelocity->ReadValue(),
             {outCoordinates[0], outCoordinates[1]},
             FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
-            this->m_IOBlocks.OutClutchLockState->ReadValue()
-            };
+            this->m_IOBlocks.OutClutchLockState->ReadValue(),
+            this->m_IOBlocks.OutInstantaneousFuelEfficiency->ReadValue(),
+            this->m_IOBlocks.OutAverageFuelEfficiency->ReadValue()};
 };
 
 
