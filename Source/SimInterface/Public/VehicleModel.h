@@ -68,6 +68,9 @@ struct FVehicleOutput
     float Velocity = 0.f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float WheelSpeed = 0.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FVector2D Coordinates = {0.f, 0.f};
 
     // Road

@@ -136,6 +136,7 @@ FVehicleOutput UVehicleModel::Update(float dt, FVehicleInput input)
             this->m_IOBlocks.OutCurrentGear->ReadValue(),
             this->m_IOBlocks.OutDisplacement->ReadValue(),
             this->m_IOBlocks.OutLinearVelocity->ReadValue(),
+            this->m_IOBlocks.OutWheelSpeed->ReadValue(),
             {outCoordinates[0], outCoordinates[1]},
             FMath::RadiansToDegrees(this->m_IOBlocks.OutGradient->ReadValue()),
             this->m_IOBlocks.OutClutchLockState->ReadValue(),
